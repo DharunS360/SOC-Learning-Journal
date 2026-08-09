@@ -15,6 +15,7 @@ The alert involved a suspicious URL that was detected through proxy activity. I 
 - **Alert Type:** Proxy
 - **Severity:** High
 - **Verdict:** True Positive
+- 
 
 ---
 
