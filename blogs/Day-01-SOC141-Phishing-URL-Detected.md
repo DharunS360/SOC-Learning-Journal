@@ -6,7 +6,9 @@ Today I investigated a phishing-related alert in the Let'sDefend SOC environment
 
 The alert involved a suspicious URL that was detected through proxy activity. I investigated the alert using endpoint information, raw logs, threat intelligence, and sandbox analysis.
 
----
+![Screenshot 1](../images/1_PDHclrQPKH2Y3zClh9eTAw.png)
+
+## Alert Evidence
 
 ## Alert Details
 
@@ -15,8 +17,7 @@ The alert involved a suspicious URL that was detected through proxy activity. I 
 - **Alert Type:** Proxy
 - **Severity:** High
 - **Verdict:** True Positive
-- 
-
+  
 ---
 
 ## Investigation Process
@@ -29,7 +30,7 @@ The proxy log showed a request to a suspicious URL:
 
 The URL was suspicious because it used a questionable domain and a PHP path commonly associated with malicious web activity.
 
----
+![Screenshot 2](images/1_Mc_F93MpGMC0ryCnKBlhvQ.png)
 
 ### 2. Endpoint Investigation
 
@@ -41,7 +42,7 @@ I checked the affected endpoint and identified the following information:
 - **Primary User:** Emily
 - **Containment:** Host contained
 
----
+![Screenshot 3](images/1_TBGvlv-RwVFg-VH9y-8CJA.png)
 
 ### 3. Threat Intelligence Analysis
 
@@ -51,7 +52,7 @@ The analysis showed multiple malicious indicators associated with the URL.
 
 The sandbox reports also identified the sample as malicious/phishing-related.
 
----
+![Screenshot 4](images/1_xchTJUkgeEnLmqyRdeu39g.png)
 
 ### 4. Network Indicators
 
@@ -66,7 +67,7 @@ Important indicators included:
 
 These indicators helped confirm that the alert was not a false positive.
 
----
+![Screenshot 5](images/1_jXVhIuE3J5pg_lfkptkmEQ.png)
 
 ### 5. Malware / Sandbox Analysis
 
@@ -78,7 +79,7 @@ Multiple sandbox reports classified the activity as:
 
 This provided additional evidence supporting the alert verdict.
 
----
+![Screenshot 6](images/1_w6MIYo7DYyp_nteqYE5ZSg.png)
 
 ## Investigation Verdict
 
@@ -94,7 +95,7 @@ The evidence included:
 - Network indicators
 - Related endpoint activity
 
----
+![Screenshot 7](images/1_OUPDhtPxmt-ANly0nqOlkw.png)
 
 ## Response
 
@@ -102,20 +103,20 @@ The affected host was contained to prevent further communication with the malici
 
 The relevant indicators were documented as artifacts during the investigation.
 
----
+![Screenshot 8](images/1_YMY_4eA2M7plysEzr2hBnA.png)
 
 ## IOCs
 
 | Type | Indicator |
 |---|---|
-| URL | `http://mogagrocol.ru/...` |
+| URL | `http://mogagrocol[.]ru/...` |
 | Domain | `mogagrocol.ru` |
 | Destination IP | `91.189.114.8` |
 | Host IP | `172.16.17.49` |
 
 > Note: The indicators above are documented for security-learning purposes only.
 
----
+![Screenshot 9](images/1_MNxoIG2GRJTG2eoc47PJLw.png)
 
 ## What I Learned
 
@@ -131,17 +132,13 @@ From this investigation, I learned how to:
 - Understand endpoint containment
 - Follow a SOC investigation workflow
 
----
-
 ## Tools Used
-
+ 
 - Let'sDefend
 - Hybrid Analysis
 - Threat Intelligence
 - Proxy Logs
 - Sandbox Analysis
-
----
 
 ## Key Takeaway
 
