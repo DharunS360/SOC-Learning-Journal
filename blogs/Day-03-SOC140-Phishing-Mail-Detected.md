@@ -35,7 +35,7 @@ This allowed me to identify the suspicious email associated with the alert.
 
 **Figure 1 — Email Security Tab**
 
-![screenshot 2](../1_6NGk2IdbdKzx94n6PJkbyQ.webp)
+![screenshot 2](../images/1_6NGk2IdbdKzx94n6PJkbyQ.webp)
 
 The email with the subject **"COVID19 Vaccine"** showed several phishing indicators.
 
@@ -43,7 +43,7 @@ The message used a COVID-19-related subject and an urgent call to action, encour
 
 **Figure 2 — Suspicious Email**
 
-![screenshot 3](../1_4AwAdBqHqiO_DI03ogMZqA.webp)
+![screenshot 3](../images/1_4AwAdBqHqiO_DI03ogMZqA.webp)
 
 
 ### 2. File Analysis
@@ -60,7 +60,7 @@ VirusTotal showed that **31 security vendors and 1 sandbox** flagged the file as
 
 **Figure 3 — VirusTotal Scan Result**
 
-![screenshot 4](../1_2MafrIticL4SfbWLMGFBXw.webp)
+![screenshot 4](../images/1_2MafrIticL4SfbWLMGFBXw.webp)
 
 I then submitted the same file to **Hybrid Analysis** for additional sandbox analysis.
 
@@ -76,7 +76,7 @@ The results from both VirusTotal and Hybrid Analysis provided additional evidenc
 
 **Figure 4 — Hybrid Analysis Results**
 
-![screenshot 5](../1_18hp7bC8pnD6h9RowjOEvQ.webp)
+![screenshot 5](../images/1_18hp7bC8pnD6h9RowjOEvQ.webp)
 
 ### 3. Email Delivery Investigation
 
@@ -93,7 +93,7 @@ The investigation showed the following destination information:
 
 **Figure 5 — Log Management**
 
-![screenshot 6](../1_BBd3H2o-wXJ87HK5aQ1csw.webp)
+![screenshot 6](../images/1_BBd3H2o-wXJ87HK5aQ1csw.webp)
 
 ### 4. Endpoint Security Investigation
 
@@ -105,7 +105,7 @@ I then reviewed the process history and terminal/command history to determine wh
 
 **Figure 6 — Endpoint Security**
 
-![screenshot 7](../1_pt7rhTJ_AtHgPcCXeuuEeQ.webp)
+![screenshot 7](../images/1_pt7rhTJ_AtHgPcCXeuuEeQ.webp)
 
 **Figure 7 — Event ID**
 
@@ -113,7 +113,7 @@ I then reviewed the process history and terminal/command history to determine wh
 
 **Figure 8 — Terminal History**
 
-![screenshot 9](../1_T2NhYRQul33t8XARbpiWTA.webp)
+![screenshot 9](../images/1_T2NhYRQul33t8XARbpiWTA.webp)
 
 The investigation did not reveal any suspicious activity. This was consistent with the fact that the email had already been **blocked**.
 
@@ -123,7 +123,7 @@ The relevant indicators identified during the investigation were documented as a
 
 **Figure 9 — Artifacts**
 
-![screenshot 10](../1_POo35k38yaVnnnne3Hkndg.webp)
+![screenshot 10](../images/1_POo35k38yaVnnnne3Hkndg.webp)
 
 ## Case Management — Playbook Answers
 
@@ -153,7 +153,7 @@ The alert was confirmed as a **True Positive** because the email contained a mal
 
 **Figure 10 — Playbook**
 
-![screenshot 11](../1_wI1O2xLxsdWg9NqftFKezw.webp)
+![screenshot 11](../images/1_wI1O2xLxsdWg9NqftFKezw.webp)
 
 ## Investigation Verdict
 
@@ -174,7 +174,7 @@ The relevant indicators were documented as artifacts, and the alert was closed a
 
 **Figure 11 — Closed Alert**
 
-![screenshot 12](../1_044KsNV8Fa3Ne4Pcdv9mEA.webp)
+![screenshot 12](../images/1_044KsNV8Fa3Ne4Pcdv9mEA.webp)
 
 ## What I Learned
 
