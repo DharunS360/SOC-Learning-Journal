@@ -150,7 +150,7 @@ Host containment helps prevent further communication and malicious activity whil
 
 **Figure 11 — Host Containment**
 
-![Host Containment](../images/1_PrzlhXFO7CW5Sx95LanMJA.webp)
+![Host Containment](../images/1_uJZWYFUMLKHTBknujXVvfQ.webp)
 
 ---
 
