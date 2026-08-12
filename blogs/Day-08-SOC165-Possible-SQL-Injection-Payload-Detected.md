@@ -37,7 +37,7 @@ I then checked the IP reputation using **VirusTotal**. The IP was flagged as mal
 
 **Figure 2 — VirusTotal**
 
-![VirusTotal](../image/1_jM7Shy7WHGYiTqGHd1dePQ.webp)
+![VirusTotal](../images/1_jM7Shy7WHGYiTqGHd1dePQ.webp)
 
 
 ### 2. Log Management Investigation
