@@ -86,7 +86,7 @@ The traffic was malicious based on the suspicious command injection activity, so
 
 **Figure 5 — Playbook**
 
-![Playbook](../images/1_DBg5SFm1-GOhvqXLMwlsng.webp)
+![Playbook](../images/1_I2aPv680lPkRdoWNMRFVyg.webp)
 
 ### 2. What Is the Attack Type?
 
