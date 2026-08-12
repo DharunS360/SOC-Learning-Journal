@@ -96,7 +96,7 @@ The attacker modified POST request parameters to send operating system commands 
 
 **Figure 6 — Playbook**
 
-![Playbook](../images/1_I2aPv680lPkRdoWNMRFVyg.webp)
+![Playbook](../images/1_9QU4FNuryPLK7vzT12r2cQ.webp)
 
 ### 3. Is It a Planned Test?
 
@@ -106,7 +106,7 @@ There was no evidence indicating that the activity was part of an authorized sec
 
 **Figure 7 — Playbook**
 
-![Playbook](../images/1_9QU4FNuryPLK7vzT12r2cQ.webp)
+![Playbook](../images/1_LpcoGy_woq5OYMYq66m8Tw.webp)
 
 ### 4. What Is the Direction of Traffic?
 
@@ -116,7 +116,7 @@ The malicious requests originated from an external IP address and targeted the i
 
 **Figure 8 — Playbook**
 
-![Playbook](../images/1_LpcoGy_woq5OYMYq66m8Tw.webp)
+![Playbook](../images/1_c5LvKKE-PQ03PIYETax3yw.webp)
 
 ### 5. Was the Attack Successful?
 
@@ -128,7 +128,7 @@ This confirmed that the command injection was successful.
 
 **Figure 9 — Playbook**
 
-![Playbook](../images/1_c5LvKKE-PQ03PIYETax3yw.webp)
+![Playbook](../images/1_pCA-X-bO93cE__mTb2G-Gw.webp)
 
 ### 6. Should the Host Be Contained?
 
@@ -138,7 +138,7 @@ Since the attack was successful, the affected server should be contained to prev
 
 **Figure 10 — Playbook**
 
-![Playbook](../images/1_pCA-X-bO93cE__mTb2G-Gw.webp)
+![Playbook](../images/1_uJZWYFUMLKHTBknujXVvfQ.webp)
 
 ---
 
