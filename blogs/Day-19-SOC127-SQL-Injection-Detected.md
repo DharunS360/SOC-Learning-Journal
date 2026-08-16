@@ -41,7 +41,7 @@ I submitted the IP address to **VirusTotal** to identify any known malicious rep
 
 **Figure 1 — VirusTotal**
 
-![VirusTotal](../images/Screenshot(680).png)
+![VirusTotal](../images/Screenshot680.png)
 
 The IP was classified as malicious and was associated with activity originating from China.
 
