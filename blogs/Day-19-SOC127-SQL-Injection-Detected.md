@@ -41,7 +41,7 @@ I submitted the IP address to **VirusTotal** to identify any known malicious rep
 
 **Figure 1 — VirusTotal**
 
-![VirusTotal](../images/Screenshot680.png)
+![VirusTotal](../images/19_1.png.png)
 
 The IP was classified as malicious and was associated with activity originating from China.
 
@@ -57,7 +57,7 @@ I decoded the URL using **CyberChef** to understand the attacker's actual reques
 
 **Figure 2 — CyberChef**
 
-![CyberChef](../images/19_1.png.png)
+![CyberChef](../images/19_2.png.png)
 
 The decoded request contained multiple suspicious techniques, including:
 
@@ -105,7 +105,7 @@ The request contained a clearly malicious SQL Injection payload combined with an
 
 **Figure 3 — Playbook**
 
-![Playbook](../images/Screenshot(683).png)
+![Playbook](../images/19_3.png.png)
 
 ---
 
@@ -119,7 +119,7 @@ It also attempted to escalate the attack into operating-system command execution
 
 **Figure 4 — Playbook**
 
-![Playbook](../images/Screenshot(684).png)
+![Playbook](../images/19_4.png.png)
 
 ---
 
@@ -131,7 +131,7 @@ There were no indicators in the lab evidence suggesting that this was an authori
 
 **Figure 5 — Playbook**
 
-![Playbook](../images/Screenshot(685).png)
+![Playbook](../images/19_5.png.png)
 
 ---
 
@@ -155,7 +155,7 @@ Therefore, the traffic direction was:
 
 **Figure 6 — Playbook**
 
-![Playbook](../images/Screenshot(686).png)
+![Playbook](../images/19_6.png.png)
 
 ---
 
@@ -173,7 +173,7 @@ Based on the Let'sDefend lab evidence and playbook criteria, the attack was cons
 
 **Figure 7 — Playbook**
 
-![Playbook](../images/Screenshot(687).png)
+![Playbook](../images/19_8.png.png)
 
 ---
 
@@ -195,7 +195,7 @@ The following indicators were identified during the investigation:
 
 **Figure 8 — Artifacts**
 
-![Artifacts](../images/Screenshot(688).png)
+![Artifacts](../images/19_9.png.png)
 
 ---
 
@@ -218,7 +218,7 @@ Because the activity went beyond a simple SQL Injection attempt and potentially 
 
 **Figure 9 — Escalation**
 
-![Escalation](../images/Screenshot(689).png)
+![Escalation](../images/19_10.png.png)
 
 ---
 
@@ -252,7 +252,7 @@ The alert was ultimately closed as a **True Positive**.
 
 **Figure 10 — Closed Alert**
 
-![Closed Alert](../images/Screenshot(690).png)
+![Closed Alert](../images/19_11.png.png)
 
 ---
 
