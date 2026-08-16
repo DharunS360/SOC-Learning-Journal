@@ -57,7 +57,7 @@ I decoded the URL using **CyberChef** to understand the attacker's actual reques
 
 **Figure 2 — CyberChef**
 
-![CyberChef](../images/Screenshot(681).png)
+![CyberChef](../images/19_1.png.png)
 
 The decoded request contained multiple suspicious techniques, including:
 
