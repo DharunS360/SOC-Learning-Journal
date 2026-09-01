@@ -36,7 +36,7 @@ I then moved to the **Log Management** section and filtered the logs using:
 
 **Figure 1 — Log Management**
 
-![Log Management](../images/Screenshot(696).png)
+![Log Management](../images/20_1.png)
 
 The log analysis revealed multiple failed authentication attempts.
 
