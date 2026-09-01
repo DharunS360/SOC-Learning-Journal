@@ -27,16 +27,16 @@ I investigated the alert using Let'sDefend SIEM, Log Management, Endpoint Securi
 ## Investigation Process
 
 
-### 2. Log Management Analysis
+### 1. Log Management Analysis
 
 I then moved to the **Log Management** section and filtered the logs using:
 
 - **Source Address:** `218.92.0.56`
 - **Destination Address:** `172.16.17.148`
 
-**Figure 3 — Log Management**
+**Figure 1 — Log Management**
 
-![Log Management](../images/Screenshot696.png.png)
+![Log Management](../images/Screenshot(696).png)
 
 The log analysis revealed multiple failed authentication attempts.
 
@@ -53,7 +53,7 @@ This confirmed that the brute force attack was successful.
 
 ---
 
-## 3. Source IP Reputation Analysis
+## 2. Source IP Reputation Analysis
 
 I checked the source IP address:
 
@@ -65,7 +65,7 @@ using multiple threat intelligence sources to determine whether the source was k
 
 VirusTotal identified the source IP as malicious.
 
-**Figure 4 — VirusTotal IP Reputation**
+**Figure 2 — VirusTotal IP Reputation**
 
 ![VirusTotal](../images/20_4.png)
 
@@ -73,7 +73,7 @@ VirusTotal identified the source IP as malicious.
 
 I also checked the IP address using AbuseIPDB, where the IP had multiple reports associated with malicious activity.
 
-**Figure 5 — AbuseIPDB Report**
+**Figure 3 — AbuseIPDB Report**
 
 ![AbuseIPDB](../images/20_5.png)
 
@@ -83,7 +83,7 @@ The IP address was also checked using Let'sDefend Threat Intelligence.
 
 The results provided additional evidence that the source IP was associated with malicious activity.
 
-**Figure 6 — Let'sDefend Threat Intelligence**
+**Figure 4 — Let'sDefend Threat Intelligence**
 
 ![Let'sDefend Threat Intelligence](../images/20_6.png)
 
@@ -91,7 +91,7 @@ The reputation checks confirmed that the source IP was suspicious and supported 
 
 ---
 
-## 4. RDP Traffic Analysis
+## 3. RDP Traffic Analysis
 
 I analyzed the network traffic associated with the source and destination addresses.
 
@@ -103,13 +103,13 @@ RDP commonly uses TCP port:
 
 The repeated requests from the same external IP toward the RDP service were consistent with a brute force attack.
 
-**Figure 7 — RDP Traffic Analysis**
+**Figure 5 — RDP Traffic Analysis**
 
 ![RDP Traffic Analysis](../images/20_7.png)
 
 ---
 
-## 5. Authentication Log Analysis
+## 4. Authentication Log Analysis
 
 I further investigated the Windows authentication events.
 
@@ -123,11 +123,11 @@ The logs showed:
 - **14 Event ID 4625** failed login attempts
 - **1 Event ID 4624** successful login
 
-**Figure 8 — Failed Login Attempts**
+**Figure 6 — Failed Login Attempts**
 
 ![Failed Login Attempts](../images/20_8.png)
 
-**Figure 9 — Successful Login**
+**Figure 7 — Successful Login**
 
 ![Successful Login](../images/20_9.png)
 
@@ -137,7 +137,7 @@ Therefore, this was not just an attempted brute force attack; the attack was **s
 
 ---
 
-## 6. Attack Scope
+## 5. Attack Scope
 
 I reviewed the affected systems to determine the scope of the attack.
 
@@ -152,19 +152,19 @@ Therefore, the observed attack scope was limited to the **Matthew** endpoint.
 
 ---
 
-## 7. Host Isolation
+## 6. Host Isolation
 
 Since the brute force attack resulted in a successful login, I proceeded with containment.
 
 The affected host **Matthew** was isolated using Endpoint Security to prevent further unauthorized access and possible exploitation.
 
-**Figure 10 — Host Isolation**
+**Figure 8 — Host Isolation**
 
 ![Host Isolation](../images/20_10.png)
 
 ---
 
-## 8. Containment
+## 7. Containment
 
 The affected endpoint was successfully isolated.
 
@@ -176,7 +176,7 @@ The affected endpoint was successfully isolated.
 
 Host isolation helps prevent the attacker from continuing communication with the compromised system while further investigation and remediation can be performed.
 
-**Figure 11 — Contained Host**
+**Figure 9 — Contained Host**
 
 ![Contained Host](../images/20_11.png)
 
