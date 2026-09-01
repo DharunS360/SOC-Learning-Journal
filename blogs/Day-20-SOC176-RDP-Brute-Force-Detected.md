@@ -36,7 +36,7 @@ I then moved to the **Log Management** section and filtered the logs using:
 
 **Figure 1 — Log Management**
 
-![Log Management](../images/20_1.png)
+![Log Management](../images/20_4.png)
 
 The log analysis revealed multiple failed authentication attempts.
 
@@ -67,7 +67,7 @@ VirusTotal identified the source IP as malicious.
 
 **Figure 2 — VirusTotal IP Reputation**
 
-![VirusTotal](../images/20_4.png)
+![VirusTotal](../images/20_1.png)
 
 ### AbuseIPDB
 
@@ -75,7 +75,7 @@ I also checked the IP address using AbuseIPDB, where the IP had multiple reports
 
 **Figure 3 — AbuseIPDB Report**
 
-![AbuseIPDB](../images/20_5.png)
+![AbuseIPDB](../images/20_2.png)
 
 ### Let'sDefend Threat Intelligence
 
@@ -85,7 +85,7 @@ The results provided additional evidence that the source IP was associated with 
 
 **Figure 4 — Let'sDefend Threat Intelligence**
 
-![Let'sDefend Threat Intelligence](../images/20_6.png)
+![Let'sDefend Threat Intelligence](../images/20_3.png)
 
 The reputation checks confirmed that the source IP was suspicious and supported the brute force investigation.
 
@@ -105,7 +105,7 @@ The repeated requests from the same external IP toward the RDP service were cons
 
 **Figure 5 — RDP Traffic Analysis**
 
-![RDP Traffic Analysis](../images/20_7.png)
+![RDP Traffic Analysis](../images/20_4.png)
 
 ---
 
@@ -125,11 +125,8 @@ The logs showed:
 
 **Figure 6 — Failed Login Attempts**
 
-![Failed Login Attempts](../images/20_8.png)
+![Failed Login Attempts](../images/20_5.png)
 
-**Figure 7 — Successful Login**
-
-![Successful Login](../images/20_9.png)
 
 The successful authentication after multiple failed attempts confirmed that the attacker was able to obtain valid credentials.
 
@@ -158,9 +155,9 @@ Since the brute force attack resulted in a successful login, I proceeded with co
 
 The affected host **Matthew** was isolated using Endpoint Security to prevent further unauthorized access and possible exploitation.
 
-**Figure 8 — Host Isolation**
+**Figure 7 — Host Isolation**
 
-![Host Isolation](../images/20_10.png)
+![Host Isolation](../images/20_14.png)
 
 ---
 
@@ -176,9 +173,9 @@ The affected endpoint was successfully isolated.
 
 Host isolation helps prevent the attacker from continuing communication with the compromised system while further investigation and remediation can be performed.
 
-**Figure 9 — Contained Host**
+**Figure 8 — Contained Host**
 
-![Contained Host](../images/20_11.png)
+![Contained Host](../images/20_17_1.png)
 
 ---
 
