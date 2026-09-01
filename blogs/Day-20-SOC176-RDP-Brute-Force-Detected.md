@@ -175,7 +175,7 @@ Host isolation helps prevent the attacker from continuing communication with the
 
 **Figure 8 — Contained Host**
 
-![Contained Host](../images/20_17_1.png)
+![Contained Host](../images/20_17_1.jpg)
 
 ---
 
