@@ -434,6 +434,6 @@ In this investigation, the attacker used a Windows-update-themed phishing email 
 
 The investigation flow was:
 
-**Alert → Email Analysis → Sender Investigation → URL Analysis → VirusTotal → Hybrid Analysis → Browser History → Malicious Link Click → Command Execution → PowerShell Analysis → Host Containment → Artifact Collection → True Positive**
+**Alert → Email Analysis → Sender Investigation → URL Analysis → VirusTotal → AnyRun → Browser History → Malicious Link Click → Command Execution → PowerShell Analysis → Host Containment → Artifact Collection → True Positive**
 
 This investigation helped me understand how a SOC analyst can correlate **email, threat intelligence, browser, and endpoint telemetry** to identify a phishing-based malware infection and respond effectively.
