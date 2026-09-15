@@ -4,6 +4,8 @@
 
 Today I investigated the **SOC338 — Lumma Stealer — DLL Side-Loading via Click Fix Phishing** alert in the Let'sDefend SOC environment.
 
+![Screenshot 1](../images/1_PDHclrQPKH2Y3zClh9eTAw.png)
+
 The alert involved a suspicious phishing email sent to a user named **Dylan**. The email was designed to look like a legitimate Windows update notification and contained an **"UPDATE NOW"** button.
 
 During the investigation, I analyzed the email details, attachment, malicious URL, and endpoint activity using **Log Management, Endpoint Security, VirusTotal, Hybrid Analysis, and the Case Management Playbook**.
@@ -52,7 +54,7 @@ The sender domain did not appear to be an official Microsoft domain, which was a
 
 **Figure 1 — SOC338 Critical Alert**
 
-![SOC338 Alert](../images/Day22-1.png)
+![SOC338 Alert](../images/22_1.png)
 
 ---
 
@@ -69,7 +71,7 @@ The email details were:
 
 **Figure 2 — Email Details**
 
-![Email Details](../images/Day22-2.png)
+![Email Details](../images/22_4.png)
 
 The sender address was suspicious because it attempted to appear related to Windows updates while using a non-official domain.
 
@@ -87,7 +89,7 @@ The email also contained an attachment/link that required further investigation.
 
 **Figure 3 — Phishing Email**
 
-![Phishing Email](../images/Day22-3.png)
+![Phishing Email](../images/22-3.png)
 
 At first glance, the email could appear legitimate to a normal user. However, the suspicious sender domain and update-themed call-to-action were important phishing indicators.
 
@@ -105,7 +107,7 @@ I investigated the URL using threat intelligence sources to determine whether it
 
 **Figure 4 — Suspicious Update Link**
 
-![Suspicious Link](../images/Day22-4.png)
+![Suspicious Link](../images/22_5.png)
 
 The URL was identified as malicious and was associated with the phishing activity.
 
@@ -117,7 +119,7 @@ I submitted the suspicious URL/file information to **VirusTotal** for reputation
 
 **Figure 5 — VirusTotal Result**
 
-![VirusTotal](../images/Day22-5.png)
+![VirusTotal](../images/22_3.png)
 
 VirusTotal identified the submitted artifact as **Malicious**.
 
@@ -131,7 +133,7 @@ I also investigated the artifact using **AnyRun**.
 
 **Figure 6 — AnyRun Result**
 
-![Hybrid Analysis](../images/Day22-6.png)
+![Hybrid Analysis](../images/22_2.png)
 
 Hybrid Analysis also classified the activity as **Malicious**.
 
@@ -185,7 +187,7 @@ The email was considered suspicious because:
 
 **Figure 7 — Playbook: Suspicious Email**
 
-![Playbook Suspicious Email](../images/Day22-7.png)
+![Playbook Suspicious Email](../images/22_9.png)
 
 ---
 
@@ -197,7 +199,7 @@ The artifact associated with the phishing email was identified as malicious by b
 
 **Figure 8 — Playbook: Malicious Artifact**
 
-![Malicious Artifact](../images/Day22-8.png)
+![Malicious Artifact](../images/22_11.png)
 
 The threat intelligence results supported the classification of the email as a malicious phishing attempt.
 
@@ -213,7 +215,7 @@ This means the security control did not block the email during delivery.
 
 **Figure 9 — Playbook: Email Delivered**
 
-![Email Delivered](../images/Day22-9.png)
+![Email Delivered](../images/22_12.png)
 
 However, delivery alone does not prove that the user interacted with the email. User interaction was confirmed separately through endpoint/browser evidence.
 
@@ -231,7 +233,7 @@ The browser history showed access to:
 
 **Figure 10 — Browser History**
 
-![Browser History](../images/Day22-10.png)
+![Browser History](../images/22_14.png)
 
 This confirmed that the phishing email was not only delivered but also interacted with by the victim.
 
@@ -245,7 +247,7 @@ The activity automatically started **PowerShell** and executed an obfuscated com
 
 **Figure 11 — Suspicious Command Execution**
 
-![Command Execution](../images/Day22-11.png)
+![Command Execution](../images/22_6.png)
 
 The command contained obfuscated strings designed to make the activity harder to detect.
 
@@ -263,7 +265,7 @@ This behavior is consistent with a **Click Fix / fake verification** style phish
 
 **Figure 12 — PowerShell Activity**
 
-![PowerShell Activity](../images/Day22-12.png)
+![PowerShell Activity](../images/22_6.png)
 
 The PowerShell activity provided strong endpoint evidence that the phishing link led to malicious execution.
 
@@ -279,7 +281,7 @@ The playbook response was:
 
 **Figure 13 — Device Containment**
 
-![Device Containment](../images/Day22-13.png)
+![Device Containment](../images/22_16.png)
 
 The device was successfully contained to prevent further malicious communication and reduce the potential impact of the Lumma Stealer activity.
 
@@ -293,13 +295,13 @@ The artifacts included the suspicious email sender, domain, URL, and other relev
 
 **Figure 14 — Add Artifacts**
 
-![Add Artifacts](../images/Day22-14.png)
+![Add Artifacts](../images/22_18.png)
 
 After adding the relevant artifacts, I confirmed the entries in the case.
 
 **Figure 15 — Confirm Artifacts**
 
-![Confirm Artifacts](../images/Day22-15.png)
+![Confirm Artifacts](../images/22_19.png)
 
 ---
 
