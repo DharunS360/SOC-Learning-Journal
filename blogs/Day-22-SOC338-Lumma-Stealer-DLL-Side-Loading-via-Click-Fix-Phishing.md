@@ -89,7 +89,7 @@ The email also contained an attachment/link that required further investigation.
 
 **Figure 3 — Phishing Email**
 
-![Phishing Email](../images/22-3.png)
+![Phishing Email](../images/22_4.png)
 
 At first glance, the email could appear legitimate to a normal user. However, the suspicious sender domain and update-themed call-to-action were important phishing indicators.
 
